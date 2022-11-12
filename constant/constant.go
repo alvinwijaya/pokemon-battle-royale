@@ -1,0 +1,6 @@
+package constant
+
+const (
+	DEFAULT_PAGINATION_PAGE  = 1
+	DEFAULT_PAGINATION_LIMIT = 20
+)

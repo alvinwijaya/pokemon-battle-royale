@@ -1,0 +1,17 @@
+Asumsi untuk konteks
+1. Response https://pokeapi.co/ merupakan list pokemon yang dimiliki
+2. Setiap pokemon dapat memiliki jumlah pertandingan yang berbeda, sehingga
+   untuk perhitungan scorenya bisa dari average (total score semua pertandingan/jumlah pertandingan)
+
+Story
+1. IWLT see pokemon stock number.
+   endpoint get count pokemon (done)
+2. IWLT record match result. For the score, the fastest to be out get 1 score, and so on until for
+   the longest to stay get 5 score.
+   endpoint store match result (done)
+3. IWLT see all the matches within a time period.
+   endpoint get all matches in pagination (additional param startDate and endDate) (done)
+4. IWLT see overall pokemon score
+   endpoint get all pokemon average score (done)
+5. BONUS: IWLT annul certain pokemon from certain match
+   endpoint to annul
