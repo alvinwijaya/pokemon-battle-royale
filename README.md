@@ -24,7 +24,7 @@ Farmacare Recruitment Exercise
 1. [GET] `/pokemons/count`
 2. [GET] `/matches`
 3. [GET] `/pokemon-average-scores`
-4. [POST] `/matches`
+4. [POST] `/matches`<br />
    example JSON body
    ```
     {
