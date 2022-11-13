@@ -60,14 +60,14 @@ Farmacare Recruitment Exercise
    untuk perhitungan scorenya bisa dari average (total score semua pertandingan/jumlah pertandingan)
 
 ## Story
-1. IWLT see pokemon stock number.
+1. IWLT see pokemon stock number.<br />
    endpoint get count pokemon (done)
 2. IWLT record match result. For the score, the fastest to be out get 1 score, and so on until for
-   the longest to stay get 5 score.
+   the longest to stay get 5 score.<br />
    endpoint store match result (done)
-3. IWLT see all the matches within a time period.
+3. IWLT see all the matches within a time period.<br />
    endpoint get all matches in pagination (additional param startDate and endDate) (done)
-4. IWLT see overall pokemon score
+4. IWLT see overall pokemon score.<br />
    endpoint get all pokemon average score (done)
-5. BONUS: IWLT annul certain pokemon from certain match
+5. BONUS: IWLT annul certain pokemon from certain match.<br />
    endpoint to annul (done)
