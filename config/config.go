@@ -39,3 +39,8 @@ func GetConfig() Config {
 
 	return instance
 }
+
+// SetConfig set custom config
+func SetConfig(cfg Config) {
+	instance = cfg
+}
