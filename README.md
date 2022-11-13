@@ -20,6 +20,9 @@ Farmacare Recruitment Exercise
    go run server.go
    ```
 
+## Entity Relationship
+![pokemon](https://user-images.githubusercontent.com/15013384/201504536-13f337be-a203-466c-9474-9f2e559c208d.png)
+
 ## Endpoints
 1. [GET] `/pokemons/count`
 2. [GET] `/matches`
