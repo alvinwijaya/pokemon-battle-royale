@@ -14,4 +14,4 @@ Story
 4. IWLT see overall pokemon score
    endpoint get all pokemon average score (done)
 5. BONUS: IWLT annul certain pokemon from certain match
-   endpoint to annul
+   endpoint to annul (done)
