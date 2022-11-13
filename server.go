@@ -10,7 +10,9 @@ import (
 	_matchRepository "github.com/alvinwijaya/pokemon-battle-royale/api/match/repository"
 	_matchService "github.com/alvinwijaya/pokemon-battle-royale/api/match/service"
 
+	_matchDetailController "github.com/alvinwijaya/pokemon-battle-royale/api/match_detail/controller"
 	_matchDetailRepository "github.com/alvinwijaya/pokemon-battle-royale/api/match_detail/repository"
+	_matchDetailService "github.com/alvinwijaya/pokemon-battle-royale/api/match_detail/service"
 
 	_pokemonAverageScoreController "github.com/alvinwijaya/pokemon-battle-royale/api/pokemon_average_score/controller"
 	_pokemonAverageScoreRepository "github.com/alvinwijaya/pokemon-battle-royale/api/pokemon_average_score/repository"
@@ -46,6 +48,12 @@ func main() {
 		pokeapiReq,
 	)
 
+	matchDetailService := _matchDetailService.NewService(
+		dbManager,
+		matchDetailRepository,
+		pokemonAverageScoreRepository,
+	)
+
 	pokemonService := _pokemonService.NewService(
 		pokeapiReq,
 	)
@@ -56,6 +64,7 @@ func main() {
 	)
 
 	matchController := _matchController.NewController(matchService)
+	matchDetailController := _matchDetailController.NewController(matchDetailService)
 	pokemonController := _pokemonController.NewController(pokemonService)
 	pokemonAverageScoreController := _pokemonAverageScoreController.NewController(pokemonAverageScoreService)
 
@@ -66,6 +75,7 @@ func main() {
 	e.GET("/matches", matchController.GetAllInPagination)
 	e.POST("/matches", matchController.Store)
 	e.GET("/pokemon-average-scores", pokemonAverageScoreController.GetAllInPagination)
+	e.DELETE("/matches/match-details/:matchDetailId", matchDetailController.Delete)
 
 	e.Logger.Fatal(e.Start(":" + conf.AppPort))
 }

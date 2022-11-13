@@ -11,4 +11,5 @@ type Repository interface {
 	Store(db *gorm.DB, data model.PokemonAverageScore) (*model.PokemonAverageScore, error)
 	UpdateByID(db *gorm.DB, id uint64, p map[string]interface{}) (*model.PokemonAverageScore, error)
 	GetAllInPagination(db *gorm.DB, paging pagination_model.Paging) (*pagination_model.PaginationData, error)
+	GetOne(db *gorm.DB, q map[string]interface{}) (*model.PokemonAverageScore, error)
 }

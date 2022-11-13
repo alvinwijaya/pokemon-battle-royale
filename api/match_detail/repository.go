@@ -7,4 +7,6 @@ import (
 
 type Repository interface {
 	BulkStore(db *gorm.DB, data *[]model.MatchDetail) error
+	Delete(db *gorm.DB, data *model.MatchDetail) (*model.MatchDetail, error)
+	GetOne(db *gorm.DB, q map[string]interface{}) (*model.MatchDetail, error)
 }
